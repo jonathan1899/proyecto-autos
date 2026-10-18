@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reto final - AutoMarket</title>
+</head>
+<body>
+
+    <header>
+        <h1>AutoMarket</h1>
+        <p>Encuentra el automóvil ideal para ti.</p>
+
+        <nav>
+            <a href="../public/index.php">Inicio</a>
+            <a href="../public/autos.php">Catálogo</a>
+            <a href="../public/contacto.php">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Automóviles destacados</h2>
+
+            <figure>
+                <a href="#formulario">
+                    <img
+                        src="img/Ford-Mustang-_01.jpg"
+                        alt="Ford Mustang GT, automóvil deportivo de alto rendimiento."
+                        width="400">
+                </a>
+                <figcaption>Ford Mustang GT: potencia y diseño deportivo.</figcaption>
+            </figure>
+
+            <h3>Modelos disponibles</h3>
+            <ul>
+                <li>Ford Mustang GT</li>
+                <li>Toyota GR Supra</li>
+                <li>Nissan GT-R</li>
+                <li>BMW M3</li>
+                <li>Porsche 911 Carrera</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Comparación de precios</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Categoría</th>
+                        <th>Precio (MXN)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ford Mustang GT</td>
+                        <td>Deportivo</td>
+                        <td>$950,000</td>
+                    </tr>
+                    <tr>
+                        <td>Toyota GR Supra</td>
+                        <td>Deportivo</td>
+                        <td>$1,250,000</td>
+                    </tr>
+                    <tr>
+                        <td>Nissan GT-R</td>
+                        <td>Deportivo</td>
+                        <td>$2,800,000</td>
+                    </tr>
+                    <tr>
+                        <td>BMW M3</td>
+                        <td>Sedán deportivo</td>
+                        <td>$1,750,000</td>
+                    </tr>
+                    <tr>
+                        <td>Porsche 911 Carrera</td>
+                        <td>Deportivo</td>
+                        <td>$2,350,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Solicita información</h2>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Datos del solicitante</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <br><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                    <br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Automóvil de interés</legend>
+
+                    <label for="modelo">Selecciona un modelo:</label>
+                    <select id="modelo" name="modelo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="mustang">Ford Mustang GT</option>
+                        <option value="supra">Toyota GR Supra</option>
+                        <option value="gtr">Nissan GT-R</option>
+                        <option value="bmw">BMW M3</option>
+                        <option value="porsche">Porsche 911 Carrera</option>
+                    </select>
+                    <br><br>
+
+                    <label for="comentarios">Comentarios:</label>
+                    <br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="35"></textarea>
+                    <br><br>
+
+                    <button type="submit">Enviar solicitud</button>
+                    <button type="reset">Limpiar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Más información</h2>
+            <p>
+                Consulta la referencia de
+                <a href="https://quickref.me/html" target="_blank" rel="noopener noreferrer">
+                    HTML5 en QuickRef.me
+                </a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Elaborado por: Jonathan</p>
+        <p>AutoMarket - Catálogo de automóviles</p>
+    </footer>
+
+</body>
+</html>

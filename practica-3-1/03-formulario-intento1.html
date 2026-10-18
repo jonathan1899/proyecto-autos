@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitud de información - AutoMarket</title>
+</head>
+<body>
+
+    <header>
+        <h1>AutoMarket</h1>
+        <nav>
+            <a href="../public/index.php">Inicio</a>
+            <a href="../public/autos.php">Catálogo</a>
+            <a href="../public/contacto.php">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Solicitud de información</h2>
+        <p>Completa el formulario para recibir información sobre un automóvil.</p>
+
+        <form action="#" method="get">
+
+            <fieldset>
+                <legend>Datos del solicitante</legend>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><br>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br><br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información del automóvil</legend>
+
+                <label for="modelo">Selecciona un automóvil:</label>
+                <select id="modelo" name="modelo" required>
+                    <option value="">Selecciona un modelo</option>
+                    <option value="mustang">Ford Mustang GT</option>
+                    <option value="supra">Toyota GR Supra</option>
+                    <option value="gtr">Nissan GT-R</option>
+                    <option value="bmw">BMW M3</option>
+                    <option value="porsche">Porsche 911 Carrera</option>
+                </select>
+                <br><br>
+
+                <label for="presupuesto">Presupuesto aproximado:</label>
+                <input type="number" id="presupuesto" name="presupuesto" min="1" required>
+                <br><br>
+
+                <p>¿Cómo prefieres que te contactemos?</p>
+
+                <input type="radio" id="contacto_correo" name="medio_contacto" value="correo" required>
+                <label for="contacto_correo">Correo electrónico</label>
+
+                <input type="radio" id="contacto_telefono" name="medio_contacto" value="telefono">
+                <label for="contacto_telefono">Teléfono</label>
+                <br><br>
+
+                <label for="comentarios">Comentarios adicionales:</label>
+                <br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea>
+                <br><br>
+            </fieldset>
+
+            <button type="submit">Enviar solicitud</button>
+            <button type="reset">Limpiar formulario</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Elaborado por: Jonathan</p>
+        <p>AutoMarket - Catálogo de automóviles</p>
+    </footer>
+
+</body>
+</html>

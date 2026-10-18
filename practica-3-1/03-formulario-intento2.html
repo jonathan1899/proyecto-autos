@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto y cotización - AutoMarket</title>
+</head>
+<body>
+
+    <header>
+        <h1>AutoMarket</h1>
+        <p>Solicita información sobre tu automóvil favorito.</p>
+
+        <nav>
+            <a href="../public/index.php">Inicio</a>
+            <a href="../public/autos.php">Catálogo</a>
+            <a href="../public/contacto.php">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de cotización</h2>
+
+            <form action="#" method="get">
+
+                <fieldset>
+                    <legend>Información de contacto</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <br><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                    <br><br>
+
+                    <label for="telefono">Número de teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                    <br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de la cotización</legend>
+
+                    <label for="automovil">Modelo de interés:</label>
+                    <select id="automovil" name="automovil" required>
+                        <option value="">Elige un automóvil</option>
+                        <option value="mustang">Ford Mustang GT</option>
+                        <option value="supra">Toyota GR Supra</option>
+                        <option value="gtr">Nissan GT-R</option>
+                        <option value="bmw">BMW M3</option>
+                        <option value="porsche">Porsche 911 Carrera</option>
+                    </select>
+                    <br><br>
+
+                    <label for="presupuesto">Presupuesto en pesos:</label>
+                    <input type="number" id="presupuesto" name="presupuesto" min="1" required>
+                    <br><br>
+
+                    <p>Medio de contacto preferido:</p>
+
+                    <input type="radio" id="correo_preferido" name="medio" value="correo" required>
+                    <label for="correo_preferido">Correo</label>
+
+                    <input type="radio" id="telefono_preferido" name="medio" value="telefono">
+                    <label for="telefono_preferido">Teléfono</label>
+                    <br><br>
+
+                    <label for="mensaje">¿Qué información necesitas?</label>
+                    <br>
+                    <textarea id="mensaje" name="mensaje" rows="5" cols="40"
+                        placeholder="Escribe tus dudas o comentarios"></textarea>
+                    <br><br>
+                </fieldset>
+
+                <button type="submit">Solicitar cotización</button>
+                <button type="reset">Borrar datos</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Elaborado por: Jonathan</p>
+        <p>AutoMarket - Catálogo de automóviles</p>
+    </footer>
+
+</body>
+</html>
