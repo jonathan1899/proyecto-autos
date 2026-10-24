@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>AutoMarket - Contacto</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMarket - Contacto</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
 
-    <body>
-        <header>
-            <h1>Bienvenido a AutoMarket</h1>
+<body>
+    <header class="encabezado">
+        <h1>AutoMarket</h1>
 
-            <nav>
-                <a href="index.php">Inicio</a>
-                <a href="autos.php">Catalogo</a>
-                <a href="contacto.php">Contacto</a>
-            </nav>
-        </header>
+        <nav class="nav-principal">
+            <a href="index.php">Inicio</a>
+            <a href="autos.php">Catálogo</a>
+            <a href="contacto.php">Contacto</a>
+        </nav>
+    </header>
 
-        <main>
-            <section>
-                <h2>Contacto</h2>
-                <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
-            </section>
-        </main>
+    <main class="contenido-principal">
+        <section class="seccion-contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2026 AutoMarket. Todos los derechos reservados.</p>
-        </footer>
-    </body>
+    <footer class="pie-pagina">
+        <p>&copy; 2026 AutoMarket. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>

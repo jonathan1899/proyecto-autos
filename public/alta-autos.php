@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>AutoMarket - Agregar Auto</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMarket - Agregar Auto</title>
 
-    <body>
-        <header>
-            <h1>Bienvenido a AutoMarket</h1>
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
 
-            <nav>
-                <a href="index.php">Inicio</a>
-                <a href="autos.php">Catalogo</a>
-                <a href="contacto.php">Contacto</a>
-            </nav>
-        </header>
+<body>
+    <header class="encabezado">
+        <h1>Bienvenido a AutoMarket</h1>
 
-        <main>
-            <section>
-                <h2>Agregar Nuevo Auto</h2>
+        <nav class="nav-principal">
+            <a href="index.php">Inicio</a>
+            <a href="autos.php">Catálogo</a>
+            <a href="contacto.php">Contacto</a>
+        </nav>
+    </header>
 
-                <form action="#" method="post">
+    <main class="contenido-principal">
+        <section class="formulario-auto">
+            <h2>Agregar Nuevo Auto</h2>
 
+            <form action="#" method="post">
+                <div class="campo-formulario">
                     <label for="nombre">Nombre del auto:</label>
                     <input type="text" name="nombre" id="nombre" required>
-                    <br>
+                </div>
 
-                    <label for="categoria">Categoria:</label>
+                <div class="campo-formulario">
+                    <label for="categoria">Categoría:</label>
                     <input type="text" name="categoria" id="categoria" required>
-                    <br>
+                </div>
 
+                <div class="campo-formulario">
                     <label for="precio">Precio:</label>
-                    <input type="number" name="precio" id="precio" step="0.01" required>
-                    <br>
+                    <input type="number" name="precio" id="precio"
+                           step="0.01" min="0" required>
+                </div>
 
+                <div class="campo-formulario">
                     <label for="stock">Stock:</label>
-                    <input type="number" name="stock" id="stock" min="0" required>
-                    <br>
+                    <input type="number" name="stock" id="stock"
+                           min="0" required>
+                </div>
 
-                    <button type="submit">Agregar Auto</button>
+                <button class="boton-enviar" type="submit">
+                    Agregar Auto
+                </button>
+            </form>
+        </section>
+    </main>
 
-                </form>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 AutoMarket. Todos los derechos reservados.</p>
-        </footer>
-    </body>
+    <footer class="pie-pagina">
+        <p>&copy; 2026 AutoMarket. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
