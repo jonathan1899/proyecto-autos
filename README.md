@@ -1,27 +1,36 @@
 # proyecto-DOMINIO
 
-Catálogo de {{qué catalogas}} con {{qué transacción}}. Proyecto de la asignatura Aplicaciones Web (E-APW-2), grupo 401.
+Catálogo de automóviles con consulta de fichas y formulario de contacto. Proyecto de la asignatura Aplicaciones Web (E-APW-2), grupo 401.
 
 ## Vista previa
 
-https://TU-USUARIO.github.io/proyecto-DOMINIO/public/
+https://github.com/jonathan1899/proyecto-autos
 
 ## Dominio y entidades
 
 | Entidad del curso | Equivalente en mi proyecto |
 |---|---|
-| Categoria | {{...}} |
-| Producto | {{...}} |
-| Cliente / Usuario | {{...}} |
-| Pedido + DetallePedido | {{...}} |
+| Categoria | {{Caterogira de Automovil}} |
+| Producto | {{Automovil}} |
+| Cliente / Usuario | {{Visitante del Catalogo}} |
+| Pedido + DetallePedido | {{Solicitud de contacto}} |
 
 ## Estructura
 
-    proyecto-DOMINIO/
-    ├── datos/datos.json
-    ├── public/
-    ├── docs/checklist-ux.md
-    └── README.md
+    proyecto-autos/
+├── datos/
+│   └── datos.json
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   └── img/
+│   ├── alta-autos.php
+│   ├── autos-detalle.php
+│   ├── autos.php
+│   ├── contacto.php
+│   └── index.php
+├── .gitignore
+└── README.md
 
 ## Estado
 
