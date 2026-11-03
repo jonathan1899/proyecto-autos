@@ -1,0 +1,439 @@
+
+/* ========================================
+   1. VARIABLES CSS
+   ======================================== */
+
+:root {
+    --color-principal: #1a3a5c;
+    --color-secundario: #2e86ab;
+    --color-fondo: #f4f6f8;
+    --color-texto: #222222;
+    --color-blanco: #ffffff;
+    --color-borde: #d9e0e7;
+    --color-hover: #42a5c5;
+    --color-texto-secundario: #555555;
+
+    --fuente-principal: Arial, Helvetica, sans-serif;
+
+    --espacio-xs: 0.5rem;
+    --espacio-sm: 1rem;
+    --espacio-md: 1.5rem;
+    --espacio-lg: 2rem;
+    --espacio-xl: 3rem;
+}
+
+/*
+Las variables permiten reutilizar colores y espacios en todo
+el sitio. Así, cambiar un color en :root actualiza los elementos
+que utilizan esa variable, en lugar de modificar cada regla.
+*/
+
+
+/* ========================================
+   2. RESET Y ORGANIZACIÓN GENERAL
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+.contenido-principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: var(--espacio-lg) auto;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*
+Con border-box, el padding y el borde se incluyen en el ancho
+y alto definidos. Con content-box, ambos se suman al tamaño
+del contenido y pueden aumentar las dimensiones finales.
+*/
+
+
+/* ========================================
+   3. ENCABEZADO Y NAVEGACIÓN
+   ======================================== */
+
+.encabezado {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: var(--espacio-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espacio-md);
+    flex-wrap: wrap;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.nav-principal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+}
+
+.nav-principal a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: var(--espacio-xs);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.nav-principal a:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
+
+.nav-principal a:focus {
+    outline: 2px solid var(--color-blanco);
+    outline-offset: 3px;
+}
+
+
+/*
+Los selectores de clase, como .nav-principal, son reutilizables.
+Un ID tiene mayor especificidad, por lo que se evitan IDs para
+los estilos generales y se facilita el mantenimiento del sitio.
+*/
+
+
+/* ========================================
+   4. TÍTULOS Y TIPOGRAFÍA
+   ======================================== */
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.catalogo-autos h2,
+.ficha-auto h2,
+.formulario-auto h2 {
+    color: var(--color-principal);
+}
+
+
+/*
+Se utilizan unidades rem para que los tamaños de texto puedan
+adaptarse al tamaño de fuente configurado por el usuario.
+El line-height de 1.5 favorece la lectura de los textos.
+*/
+
+
+/* ========================================
+   5. CATÁLOGO Y TARJETAS DE AUTOS
+   ======================================== */
+
+.catalogo-autos h2 {
+    margin-bottom: var(--espacio-md);
+}
+
+.contenedor-autos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-lg);
+    align-items: stretch;
+}
+
+.tarjeta-auto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-blanco);
+    padding: var(--espacio-md);
+    margin: var(--espacio-xs) 0;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.tarjeta-auto h3 {
+    color: var(--color-principal);
+    margin-top: 0;
+    margin-bottom: var(--espacio-xs);
+}
+
+.tarjeta-auto .imagen-auto {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: var(--espacio-sm);
+}
+
+.categoria-auto {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+    margin: var(--espacio-xs) 0;
+}
+
+.precio-auto {
+    color: var(--color-secundario);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: var(--espacio-xs) 0 var(--espacio-md);
+}
+
+
+/* ========================================
+   6. BOTONES Y ENLACES
+   ======================================== */
+
+.boton-agregar,
+.boton-detalles {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: var(--espacio-xs) var(--espacio-sm);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton-agregar {
+    margin-top: var(--espacio-sm);
+    margin-bottom: var(--espacio-md);
+}
+
+.boton-detalles {
+    margin-top: auto;
+}
+
+.boton-agregar:hover,
+.boton-detalles:hover {
+    background-color: var(--color-principal);
+}
+
+.boton-agregar:focus,
+.boton-detalles:focus {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   7. FICHA DE DETALLE DEL AUTO
+   ======================================== */
+
+.ficha-auto {
+    max-width: 800px;
+    margin: var(--espacio-lg) auto;
+    padding: var(--espacio-lg);
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ficha-auto h2 {
+    font-size: 1.6rem;
+}
+
+.ficha-auto p {
+    line-height: 1.6;
+}
+
+.ficha-auto .precio-auto {
+    font-size: 1.5rem;
+}
+
+
+/* ========================================
+   8. FORMULARIO DE ALTA DE AUTOS
+   ======================================== */
+
+.formulario-auto {
+    max-width: 600px;
+    margin: var(--espacio-lg) auto;
+    padding: var(--espacio-lg);
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-auto h2 {
+    margin-top: 0;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+    margin-bottom: var(--espacio-md);
+}
+
+.campo-formulario label {
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: var(--espacio-sm);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: 2px solid var(--color-secundario);
+    outline-offset: 1px;
+}
+
+.campo-formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.boton-enviar {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: var(--espacio-sm) var(--espacio-md);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--color-principal);
+}
+
+.boton-enviar:focus {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   9. SECCIÓN DE CONTACTO
+   ======================================== */
+
+.seccion-contacto {
+    margin: 0;
+    padding: var(--espacio-sm) 0;
+    text-align: left;
+}
+
+.seccion-contacto h2 {
+    font-size: 1.6rem;
+    color: var(--color-principal);
+    text-align: left;
+    margin-top: 0;
+}
+
+.seccion-contacto p {
+    text-align: left;
+}
+
+
+/* ========================================
+   10. PIE DE PÁGINA
+   ======================================== */
+
+.pie-pagina {
+    background-color: transparent;
+    color: var(--color-texto);
+    text-align: left;
+    padding: var(--espacio-sm) 5%;
+    margin-top: var(--espacio-sm);
+}
+
+.pie-pagina p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   11. DISEÑO RESPONSIVO
+   ======================================== */
+
+@media (max-width: 700px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-principal {
+        justify-content: flex-start;
+    }
+
+    .contenedor-autos {
+        grid-template-columns: 1fr;
+    }
+
+    .ficha-auto,
+    .formulario-auto {
+        padding: var(--espacio-md);
+    }
+}
+
+@media (max-width: 400px) {
+    .encabezado {
+        padding: var(--espacio-sm);
+    }
+
+    .contenido-principal {
+        width: 92%;
+    }
+
+    .nav-principal {
+        gap: var(--espacio-xs);
+    }
+}
+
