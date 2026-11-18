@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Ford Mustang GT",
         "categoria": "Deportivo",
-        "precio": 950000.00,
+        "precio": 950000,
         "descripcion": "Automovil deportivo con motor V8 de alto rendimiento y diseño deportivo.",
         "stock": 3
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "nombre": "Toyota GR Supra",
         "categoria": "Deportivo",
-        "precio": 1250000.00,
+        "precio": 1250000,
         "descripcion": "Automovil deportivo japones con gran rendimiento y diseño moderno.",
         "stock": 2
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "nombre": "Nissan GT-R",
         "categoria": "Deportivo",
-        "precio": 2800000.00,
+        "precio": 2800000,
         "descripcion": "Deportivo de alto rendimiento conocido por su potente motor y tecnologia avanzada.",
         "stock": 2
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "nombre": "BMW M3",
         "categoria": "Sedan deportivo",
-        "precio": 1750000.00,
+        "precio": 1750000,
         "descripcion": "Sedan deportivo que combina rendimiento, tecnologia y comodidad.",
         "stock": 4
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "nombre": "Porsche 911 Carrera",
         "categoria": "Deportivo",
-        "precio": 2350000.00,
+        "precio": 2350000,
         "descripcion": "Automovil deportivo de lujo con alto rendimiento y diseño caracteristico.",
         "stock": 2
     }

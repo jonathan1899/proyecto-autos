@@ -437,3 +437,57 @@ El line-height de 1.5 favorece la lectura de los textos.
     }
 }
 
+/* ========================================
+   12. BUSCADOR DEL CATÁLOGO
+   ======================================== */
+
+.buscador-catalogo {
+    max-width: 600px;
+    margin: var(--espacio-md) 0;
+}
+
+.buscador-catalogo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: var(--espacio-xs);
+}
+
+.buscador-catalogo input {
+    width: 100%;
+    padding: var(--espacio-sm);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+}
+
+.buscador-catalogo input:focus {
+    outline: 2px solid var(--color-secundario);
+    outline-offset: 1px;
+}
+
+/* Oculta las tarjetas que no coinciden con la búsqueda */
+.tarjeta-auto[hidden] {
+    display: none;
+}
+
+
+/* ========================================
+   13. MENSAJES DEL FORMULARIO
+   ======================================== */
+
+.mensaje-formulario {
+    padding: var(--espacio-sm);
+    border-radius: 5px;
+    margin-bottom: var(--espacio-md);
+}
+
+.mensaje-formulario.exito {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.mensaje-formulario.error {
+    background-color: #ffebee;
+    color: #b71c1c;
+}

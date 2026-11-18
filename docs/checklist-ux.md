@@ -37,4 +37,4 @@ Durante la evaluación también se comprobaron los siguientes aspectos:
 
 Los hallazgos relacionados con el envío del formulario y la visualización del automóvil deben revisarse en el código para identificar si existe un problema de almacenamiento o recuperación de datos.
 
-La evaluación identifica seis oportunidades de mejora que abarcan cinco heurísticas diferentes de Nielsen: H1, H3, H5, H7 y H10.
+La evaluación identifica seis oportunidades de mejora que abarcan cinco heurísticas diferentes de Nielsen: H1, H3, H5, H7 y H10.git status

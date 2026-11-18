@@ -1,11 +1,39 @@
+
+<?php
+$archivoDatos = __DIR__ . '/../datos/datos.json';
+$contenido = file_get_contents($archivoDatos);
+$autos = json_decode($contenido, true);
+
+if (!is_array($autos)) {
+    $autos = [];
+}
+
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$autoEncontrado = null;
+
+if ($id !== false && $id !== null) {
+    foreach ($autos as $auto) {
+        if ((int)($auto['id'] ?? 0) === $id) {
+            $autoEncontrado = $auto;
+            break;
+        }
+    }
+}
+
+$imagenes = [
+    1 => 'assets/img/Ford-Mustang-_01.jpg',
+    2 => 'assets/img/toyota supra.jpg',
+    3 => 'assets/img/nissan gt-r.jpg',
+    4 => 'assets/img/bmw.jpg',
+    5 => 'assets/img/porsche.jpg'
+];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoMarket - Detalle del auto</title>
-
-    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 
@@ -21,25 +49,55 @@
     </header>
 
     <main class="contenido-principal">
-        <article class="tarjeta-auto ficha-auto">
-            <h2>Ford Mustang GT</h2>
+        <?php if ($autoEncontrado !== null): ?>
+            <?php
+            $auto = $autoEncontrado;
+            $idAuto = (int)$auto['id'];
+            ?>
 
-            <p class="categoria-auto">Categoría: Deportivo</p>
+            <article class="tarjeta-auto ficha-auto">
+                <?php if (isset($imagenes[$idAuto])): ?>
+                    <img
+                        class="imagen-auto"
+                        src="<?= htmlspecialchars($imagenes[$idAuto]) ?>"
+                        alt="<?= htmlspecialchars($auto['nombre']) ?>"
+                    >
+                <?php endif; ?>
 
-            <p class="precio-auto">Precio: $950,000.00</p>
+                <h2><?= htmlspecialchars($auto['nombre']) ?></h2>
 
-            <p>
-                <strong>Descripción:</strong>
-                Automóvil deportivo con motor V8 de alto rendimiento
-                y diseño deportivo.
-            </p>
+                <p class="categoria-auto">
+                    Categoría: <?= htmlspecialchars($auto['categoria']) ?>
+                </p>
 
-            <p><strong>Stock:</strong> 3 unidades</p>
+                <p class="precio-auto">
+                    Precio: $<?= number_format((float)$auto['precio'], 2) ?> MXN
+                </p>
 
-            <a class="boton-detalles" href="autos.php">
-                Volver al catálogo
-            </a>
-        </article>
+                <p>
+                    <strong>Descripción:</strong>
+                    <?= htmlspecialchars($auto['descripcion'] ?? 'Sin descripción disponible.') ?>
+                </p>
+
+                <p>
+                    <strong>Stock:</strong>
+                    <?= (int)$auto['stock'] ?> unidades
+                </p>
+
+                <a class="boton-detalles" href="autos.php">
+                    Volver al catálogo
+                </a>
+            </article>
+
+        <?php else: ?>
+            <section class="ficha-auto">
+                <h2>Automóvil no encontrado</h2>
+                <p>El automóvil que buscas no existe en nuestro catálogo.</p>
+                <a class="boton-detalles" href="autos.php">
+                    Volver al catálogo
+                </a>
+            </section>
+        <?php endif; ?>
     </main>
 
     <footer class="pie-pagina">

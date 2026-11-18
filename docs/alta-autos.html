@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoMarket - Agregar Auto</title>
-
-    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 
@@ -17,7 +15,7 @@
             <a href="index.html">Inicio</a>
             <a href="autos.html">Catálogo</a>
             <a href="contacto.html">Contacto</a>
-            <a href="alta-autos.html">Agregar auto</a>
+            <a href="alta-autos.html" aria-current="page">Agregar auto</a>
         </nav>
     </header>
 
@@ -25,7 +23,7 @@
         <section class="formulario-auto">
             <h2>Agregar Nuevo Auto</h2>
 
-            <form action="#" method="post">
+            <form id="formulario-auto">
                 <div class="campo-formulario">
                     <label for="nombre">Nombre del auto:</label>
                     <input type="text" name="nombre" id="nombre" required>
@@ -39,7 +37,7 @@
                 <div class="campo-formulario">
                     <label for="precio">Precio:</label>
                     <input type="number" name="precio" id="precio"
-                           step="0.01" min="0" required>
+                           step="0.01" min="0.01" required>
                 </div>
 
                 <div class="campo-formulario">
@@ -52,11 +50,15 @@
                     Agregar Auto
                 </button>
             </form>
+
+            <p id="mensaje-formulario" role="status" aria-live="polite"></p>
         </section>
     </main>
 
     <footer class="pie-pagina">
         <p>&copy; 2026 AutoMarket. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="assets/js/autos.js"></script>
 </body>
 </html>

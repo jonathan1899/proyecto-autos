@@ -437,3 +437,8 @@ El line-height de 1.5 favorece la lectura de los textos.
     }
 }
 
+
+/* Ocultar automóviles que no coinciden con la búsqueda */
+.tarjeta-auto[hidden] {
+    display: none;
+}
